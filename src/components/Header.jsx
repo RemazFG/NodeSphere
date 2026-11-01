@@ -9,6 +9,7 @@ export default function Header() {
         </div>
         
         <nav className="header-center">
+            <a href="#home" className="nav-link">Home</a>
             <a href="#docs" className="nav-link">Developer docs</a>
             <a href="#api" className="nav-link">API specs</a>
             <a href="#cases" className="nav-link">Case studies</a>
