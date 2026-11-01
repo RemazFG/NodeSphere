@@ -1,0 +1,97 @@
+/* src/index.css */
+:root {
+  --bg-color: #0f172a;
+  --surface-color: #1e293b;
+  --text-color: #f8fafc;
+  --accent-gradient: linear-gradient(135deg, #38bdf8, #818cf8);
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2.5rem;
+  background-color: var(--surface-color);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  margin-left: 1.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero-section h2 {
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.hero-section p {
+  color: #94a3b8;
+  font-size: 1.125rem;
+  margin-bottom: 2.5rem;
+}
+
+.primary-action {
+  padding: 0.875rem 2rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent-gradient);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.primary-action:hover {
+  transform: translateY(-2px);
+}
+
+.app-footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--surface-color);
+  font-size: 0.875rem;
+  color: #64748b;
+}
