@@ -4,6 +4,7 @@ import instagram from '../assets/instagram.png';
 import x from '../assets/x.png';
 import linkedin from '../assets/linkedin.png';
 import youtube from '../assets/youtube.png';
+import './Footer.css';
 
 export default function Footer() {
     return (

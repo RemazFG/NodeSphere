@@ -1,5 +1,6 @@
 // src/pages/SandboxPage.jsx
 import { useState } from 'react';
+import './SandboxPage.css';
 
 export default function SandboxPage() {
     const [systemStatus, setSystemStatus] = useState("IDLE");

@@ -1,0 +1,445 @@
+    /* =========================================
+    3. MAIN CONTENT (GRADIENT BANNER & SECTION 2)
+    ========================================= */
+    .main-content {
+    flex: 1;
+    }
+
+    /* HERO: DARK / BLUE / WHITE LINEAR GRADIENT */
+    .hero-section {
+    background: linear-gradient(180deg, 
+        #1b1d2f 0%, 
+        var(--navy-primary) 40%, 
+        #324478 75%, 
+        var(--white) 100%
+    );
+    padding: 8rem 2rem 10rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    letter-spacing: -0.025em;
+    max-width: 800px;
+    line-height: 1.1;
+    }
+
+    .hero-section p {
+    color: #d1d5db;
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    line-height: 1.6;
+    }
+
+    .primary-action {
+    padding: 0.875rem 2rem;
+    border: none;
+    border-radius: 9999px;
+    background-color: var(--navy-primary);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 4px 15px rgba(8, 48, 74, 0.4);
+    }
+
+    .primary-action:hover {
+    transform: translateY(-2px);
+    background-color: #0a3d5e;
+    }
+
+    /* SECTION 2: WHITE BACKGROUND & DUAL-TONE CARDS */
+    .built-for-scale-section {
+    background-color: var(--white);
+    color: var(--text-dark);
+    padding: 6rem 5rem;
+    }
+
+    .section-header {
+    margin-bottom: 4rem;
+    max-width: 600px;
+    }
+
+    .section-tag {
+    color: var(--navy-primary);
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 0.75rem;
+    }
+
+    .section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0 0 1rem 0;
+    color: #111827;
+    letter-spacing: -0.025em;
+    }
+
+    .section-header p {
+    color: #4b5563;
+    font-size: 1.125rem;
+    margin: 0;
+    line-height: 1.6;
+    }
+
+    /* Feature Cards Grid */
+    .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    }
+
+    .feature-card {
+    background-color: #fcfcfc;
+    padding: 2.5rem;
+    border-radius: 16px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Dual-Tone Blue & Navy Border Effect */
+    .feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 16px;
+    padding: 2px; /* Border weight */
+    background: linear-gradient(135deg, var(--blue-accent) 0%, var(--navy-primary) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    }
+
+    .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(17, 49, 71, 0.63);
+    }
+
+    .card-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1.5rem;
+    }
+
+    .feature-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 0.75rem 0;
+    color: var(--navy-primary);
+    }
+
+    .feature-card p {
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
+    }
+
+    .learn-more-btn {
+    background: none;
+    border: none;
+    color: var(--navy-primary);
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0;
+    transition: color 0.2s ease;
+    }
+
+    .learn-more-btn:hover {
+    color: var(--blue-accent);
+    }
+
+    /* =========================================
+    5. FIELD DASHBOARD (SECTION 3)
+    ========================================= */
+    .field-section {
+    background-color: var(--white);
+    color: var(--text-dark);
+    padding: 6rem 5rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    }
+
+    .field-content {
+    flex: 1;
+    }
+
+    .field-content h2 {
+    font-size: 2.75rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.025em;
+    color: #111827;
+    }
+
+    .field-subtitle {
+    font-size: 1.125rem;
+    color: #4b5563;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    }
+
+    .field-features-split {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    }
+
+    .split-item {
+    flex: 1;
+    }
+
+    .split-item h3 {
+    font-size: 1.125rem;
+    color: #111827;
+    margin-bottom: 0.75rem;
+    }
+
+    .split-item p {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.5;
+    }
+
+    .field-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    }
+
+    .btn-outline {
+    background: transparent;
+    border: 1px solid #d1d5db;
+    border-radius: 24px;
+    padding: 0.6rem 2rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111827;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    }
+
+    .btn-outline:hover {
+    border-color: #111827;
+    }
+
+    .btn-text {
+    background: none;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111827;
+    cursor: pointer;
+    }
+
+    .field-image-container {
+    flex: 1.2;
+    }
+
+    .field-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    }
+
+    /* =========================================
+    6. ABOUT SECTION (SECTION 4)
+    ========================================= */
+    .about-section {
+    background-color: var(--white);
+    color: var(--text-dark);
+    padding: 6rem 5rem;
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    }
+
+    .about-content {
+    flex: 1;
+    }
+
+    .about-content h2 {
+    font-size: 2.75rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: #111827;
+    }
+
+    .about-content p {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    }
+
+    .about-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    }
+
+    .about-logo {
+    max-width: 400px;
+    height: auto;
+    }
+
+    /* =========================================
+    7. CONTACT SECTION (SECTION 5)
+    ========================================= */
+    .contact-section {
+    background-color: #587285; /* Secondary Slate Blue */
+    color: var(--white);
+    padding: 6rem 5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 4rem;
+    }
+
+    .contact-info {
+    flex: 1;
+    }
+
+    .contact-info h2 {
+    font-size: 2.75rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    }
+
+    .contact-info p {
+    font-size: 1.125rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    }
+
+    .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 0.95rem;
+    }
+
+    .contact-details a, .contact-details p {
+    color: var(--white);
+    text-decoration: none;
+    opacity: 0.9;
+    margin: 0;
+    }
+
+    .contact-details a:hover {
+    text-decoration: underline;
+    opacity: 1;
+    }
+
+    .contact-form-container {
+    flex: 1.5;
+    }
+
+    .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    }
+
+    .form-row {
+    display: flex;
+    gap: 1.5rem;
+    }
+
+    .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    }
+
+    .form-group label {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form input[type="tel"],
+    .contact-form select,
+    .contact-form textarea {
+    background-color: #b0c4cf; /* Light slate for inputs */
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: #111827;
+    }
+
+    .contact-form input:focus,
+    .contact-form select:focus,
+    .contact-form textarea:focus {
+    outline: 2px solid var(--white);
+    }
+
+    .radio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    }
+
+    .radio-grid label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    }
+
+    .checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    }
+
+    .submit-btn {
+    background-color: var(--white);
+    color: #111827;
+    border: none;
+    border-radius: 24px;
+    padding: 0.75rem 2rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-start;
+    margin-top: 1rem;
+    transition: opacity 0.2s;
+    }
+
+    .submit-btn:hover {
+    opacity: 0.9;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+    .field-section, .about-section, .contact-section {
+        flex-direction: column;
+        padding: 4rem 2rem;
+    }
+    }

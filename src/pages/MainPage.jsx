@@ -4,6 +4,7 @@ import trackingIcon from '../assets/tracking-icon.jpg';
 import maintenanceIcon from '../assets/maintenance-icon.jpg';
 import phoneView from '../assets/phoneView.jpg'; 
 import fullLogo from '../assets/fullLogo.png'; 
+import './MainPage.css';
 
 export default function MainPage() {
     return (
