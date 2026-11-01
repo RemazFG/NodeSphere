@@ -20,7 +20,9 @@ export default function Header() {
         </nav>
 
         <div className="header-right">
-            <button className="sandbox-btn">Sandbox</button>
+            <button className="sandbox-btn" onClick={() => window.location.href = '/sandbox'}>
+                Sandbox
+            </button>
         </div>
         </header>
     );

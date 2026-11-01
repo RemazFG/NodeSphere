@@ -357,7 +357,7 @@ body {
 }
 
 .footer-logo {
-  height: 32px;
+  height: 64px;
   width: auto;
 }
 
@@ -703,5 +703,144 @@ body {
   .field-section, .about-section, .contact-section {
     flex-direction: column;
     padding: 4rem 2rem;
+  }
+}
+
+/* =========================================
+  8. SANDBOX & DASHBOARD PAGE
+========================================= */
+.sandbox-page-container {
+  flex: 1;
+  background-color: var(--bg-dark);
+  padding: 4rem 5rem;
+  color: var(--white);
+}
+
+.sandbox-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sandbox-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.sandbox-header p {
+  color: #9ca3af;
+  font-size: 1.125rem;
+}
+
+.sandbox-split-view {
+  display: flex;
+  gap: 2rem;
+  min-height: 500px;
+}
+
+.sandbox-panel {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Code Editor Panel */
+.code-panel {
+  background-color: #050505;
+}
+
+.panel-top-bar {
+  background-color: #111111;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: monospace;
+  color: #38bdf8;
+}
+
+.execute-btn {
+  background-color: var(--navy-primary);
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.execute-btn:hover {
+  background-color: var(--blue-accent);
+}
+
+.code-editor {
+  padding: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+/* Dashboard Panel */
+.dashboard-panel {
+  background-color: #0f172a; /* Slightly lighter slate/blue for UI contrast */
+  padding: 2rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.dash-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.dash-card.full-width {
+  grid-column: span 2;
+}
+
+.dash-card h4 {
+  margin: 0 0 1rem 0;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metric-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.status-indicator {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.text-green { color: #34d399; }
+.text-blue { color: #38bdf8; }
+
+.feed-log p {
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 1024px) {
+  .sandbox-split-view {
+    flex-direction: column;
   }
 }
