@@ -1,15 +1,24 @@
 // src/components/Header.jsx
-import logo from '../assets/logo.png'; // Update extension to .svg or .jpg if needed
+import { useNavigate } from 'react-router-dom';
+import logo from '../assets/logo.png'; 
 
 export default function Header() {
+  const navigate = useNavigate(); // Initialize the hook
+
     return (
         <header className="app-header">
         <div className="header-left">
-            <img src={logo} alt="NodeSphere Logo" className="logo-image" />
+            {/* Use navigate for the logo too! */}
+            <img 
+            src={logo} 
+            alt="NodeSphere Logo" 
+            className="logo-image" 
+            style={{ cursor: 'pointer' }}
+            onClick={() => navigate('/')} 
+            />
         </div>
         
         <nav className="header-center">
-            <a href="#home" className="nav-link">Home</a>
             <a href="#docs" className="nav-link">Developer docs</a>
             <a href="#api" className="nav-link">API specs</a>
             <a href="#cases" className="nav-link">Case studies</a>
@@ -20,8 +29,9 @@ export default function Header() {
         </nav>
 
         <div className="header-right">
-            <button className="sandbox-btn" onClick={() => window.location.href = '/sandbox'}>
-                Sandbox
+            {/* React Router's programmatic navigation */}
+            <button className="sandbox-btn" onClick={() => navigate('/sandbox')}>
+            Sandbox
             </button>
         </div>
         </header>
