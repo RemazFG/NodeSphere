@@ -1,9 +1,10 @@
 // src/components/Footer.jsx
 import logo from '../assets/logo.png';
-import instagram from '../assets/instagram.png';
-import x from '../assets/x.png';
-import linkedin from '../assets/linkedin.png';
-import youtube from '../assets/youtube.png';
+import instagram from '../assets/footerIcons/instagram.png';
+import x from '../assets/footerIcons/x.png';
+import linkedin from '../assets/footerIcons/linkedin.png';
+import youtube from '../assets/footerIcons/youtube.png';
+
 import './Footer.css';
 
 export default function Footer() {
