@@ -20,18 +20,17 @@ export default function Header() {
         </div>
         
         <nav className="header-center">
-            <a onClick={() => navigate('/')} className="nav-link" style={{ cursor: 'pointer' }}>
-                Home
-            </a>
-            <a href="#docs" className="nav-link">Developer docs</a>
-            <a href="#api" className="nav-link">API specs</a>
-            <a href="#cases" className="nav-link">Case studies</a>
+            {/* I use 'end' on the Home link so it only highlights when exactly on '/' */}
+            <NavLink to="/" className="nav-link" end>Home</NavLink>
+            <NavLink to="/docs" className="nav-link">Developer docs</NavLink>
+            <NavLink to="/api" className="nav-link">API specs</NavLink>
+            <NavLink to="/cases" className="nav-link">Case studies</NavLink>
             <div className="nav-dropdown">
-            <a href="#tracking" className="nav-link">Asset tracking</a>
+            <NavLink to="/tracking" className="nav-link">Asset tracking</NavLink>
             <span className="dropdown-arrow">v</span>
-            </div>
+        </div>
         </nav>
-
+            
         <div className="header-right">
             {/* React Router's programmatic navigation */}
             <button className="sandbox-btn" onClick={() => navigate('/sandbox')}>

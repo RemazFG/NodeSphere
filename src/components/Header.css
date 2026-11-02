@@ -1,63 +1,65 @@
 /* =========================================
     2. HEADER STYLES
     ========================================= */
-    .app-header {
+    /* src/components/Header.css */
+
+.app-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.25rem 3rem;
     background-color: #0d0c0b;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
+}
 
-    .header-left, .header-right {
+.header-left, .header-right {
     flex: 1;
-    }
+}
 
-    .header-right {
+.header-right {
     display: flex;
     justify-content: flex-end;
-    }
+}
 
-    .logo-image {
+.logo-image {
     height: 32px; 
     width: auto;
     display: block;
-    }
+}
 
-    .header-center {
+.header-center {
     display: flex;
     align-items: center;
     gap: 2rem;
     flex: 2;
     justify-content: center;
-    }
+}
 
-    .nav-link {
+.nav-link {
     color: #9ca3af; 
     text-decoration: none;
     font-size: 0.875rem;
     font-weight: 500;
     transition: color 0.2s ease;
-    }
+}
 
-    .nav-link:hover {
+.nav-link:hover {
     color: var(--white);
-    }
+}
 
-    .nav-dropdown {
+.nav-dropdown {
     display: flex;
     align-items: center;
     gap: 0.4rem;
     cursor: pointer;
-    }
+}
 
-    .dropdown-arrow {
+.dropdown-arrow {
     font-size: 0.7rem;
     color: #9ca3af;
-    }
+}
 
-    .sandbox-btn {
+.sandbox-btn {
     background-color: var(--white);
     color: #000000;
     border: none;
@@ -67,8 +69,27 @@
     font-weight: 600;
     cursor: pointer;
     transition: opacity 0.2s ease;
-    }
+}
 
-    .sandbox-btn:hover {
+.sandbox-btn:hover {
     opacity: 0.9;
+}
+
+/* Active state applied automatically by React Router's NavLink */
+.nav-link.active {
+    color: var(--white);
+    font-weight: 700;
+    position: relative;
+}
+
+/* Optional: Adds a small blue underline indicator to the active tab */
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--blue-accent);
+    border-radius: 2px;
 }
