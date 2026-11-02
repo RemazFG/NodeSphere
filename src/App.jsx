@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import MainPage from './pages/MainPage';
 import SandboxPage from './pages/SandboxPage';
 import './index.css';
+import DocsPage from './pages/DocsPage';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/sandbox" element={<SandboxPage />} />
+          <Route path="/docs" element={<DocsPage />} /> 
         </Routes>
         <Footer />
       </div>

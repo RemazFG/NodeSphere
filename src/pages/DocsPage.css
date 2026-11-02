@@ -1,0 +1,315 @@
+
+    /* src/pages/DocsPage.css */
+
+    .docs-page-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    color: var(--text-dark);
+    }
+
+    /* Common Text Styles */
+    .section-tag {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #4b5563;
+    margin-bottom: 1rem;
+    display: block;
+    }
+
+    .section-tag-light {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #e2e8f0;
+    margin-bottom: 1rem;
+    display: block;
+    }
+
+    /* =========================================
+    SECTION 1: HERO
+    ========================================= */
+    .docs-hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding: 10rem 5rem;
+    text-align: center;
+    color: var(--white);
+    }
+
+    .hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(13, 12, 11, 0.85); /* Dark overlay */
+    z-index: 1;
+    }
+
+    .docs-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    }
+
+    .docs-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    }
+
+    .docs-hero p {
+    font-size: 1.125rem;
+    color: #d1d5db;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    }
+
+    .hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    }
+
+    .btn-solid {
+    background-color: var(--white);
+    color: #111827;
+    padding: 0.75rem 2rem;
+    border-radius: 24px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    }
+
+    .btn-outline-light {
+    background-color: transparent;
+    color: var(--white);
+    padding: 0.75rem 2rem;
+    border-radius: 24px;
+    font-weight: 600;
+    border: 1px solid var(--white);
+    cursor: pointer;
+    }
+
+    /* =========================================
+    SECTION 2: SPLIT CONTENT
+    ========================================= */
+    .docs-split-section {
+    background-color: #6a8292; /* Slate Blue from design */
+    color: var(--white);
+    padding: 6rem 5rem;
+    }
+
+    .split-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    }
+
+    .split-header h2 {
+    font-size: 2.75rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    }
+
+    .split-header .section-tag { color: #e2e8f0; }
+    .split-header p { color: #e2e8f0; max-width: 600px; margin: 0 auto 2rem auto; }
+
+    .split-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    }
+
+    .btn-outline-dark {
+    background-color: transparent;
+    color: inherit;
+    padding: 0.6rem 1.8rem;
+    border-radius: 24px;
+    font-weight: 600;
+    border: 1px solid currentColor;
+    cursor: pointer;
+    }
+
+    .split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    }
+
+    .feature-block {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .feature-block:last-child { border-bottom: none; }
+
+    .feature-block h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .feature-block p { color: #e2e8f0; line-height: 1.6; }
+
+    .workspace-img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+
+    /* =========================================
+    SECTION 3: INTERACTIVE TABS
+    ========================================= */
+    .docs-tabs-section {
+    padding: 6rem 5rem;
+    background-color: var(--white);
+    }
+
+    .tabs-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    }
+
+    .tabs-header h2 { font-size: 2.75rem; font-weight: 800; margin-bottom: 1rem; color: #111827; }
+    .tabs-header p { color: #4b5563; max-width: 600px; margin: 0 auto; }
+
+    .tabs-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    }
+
+    .tabs-nav {
+    display: flex;
+    border-bottom: 1px solid #e5e7eb;
+    }
+
+    .tab-btn {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6b7280;
+    cursor: pointer;
+    border-right: 1px solid #e5e7eb;
+    transition: all 0.2s;
+    }
+
+    .tab-btn:last-child { border-right: none; }
+    .tab-btn:hover { background-color: #f9fafb; }
+    .tab-btn.active { color: #111827; box-shadow: inset 0 -2px 0 #111827; }
+
+    .tab-content-area {
+    display: flex;
+    padding: 3rem;
+    gap: 3rem;
+    align-items: center;
+    }
+
+    .tab-text { flex: 1; }
+    .tab-label { font-weight: 700; font-size: 0.85rem; color: #111827; display: block; margin-bottom: 1rem; }
+    .tab-text h3 { font-size: 2rem; margin-bottom: 1rem; line-height: 1.2; color: #111827; }
+    .tab-text p { color: #4b5563; line-height: 1.6; margin-bottom: 2rem; }
+
+    .tab-actions { display: flex; align-items: center; gap: 1.5rem; }
+
+    .tab-image {
+    flex: 1.2;
+    }
+
+    .code-snippet-img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    /* =========================================
+    SECTION 4: STICKY SCROLL
+    ========================================= */
+    .docs-sticky-section {
+    background-color: #6a8292; /* Slate Blue */
+    color: var(--white);
+    padding: 6rem 5rem;
+    }
+
+    .sticky-layout {
+    display: flex;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start; /* Required for sticky to work */
+    }
+
+    .sticky-sidebar {
+    flex: 1;
+    position: sticky;
+    top: 100px; /* Locks 100px from top of viewport */
+    height: max-content; 
+    }
+
+    .sticky-sidebar .section-tag { color: #e2e8f0; }
+    .sticky-sidebar h2 { font-size: 2.75rem; font-weight: 800; margin-bottom: 1rem; }
+    .sticky-sidebar p { color: #e2e8f0; line-height: 1.6; margin-bottom: 2rem; }
+    .sticky-actions { display: flex; align-items: center; gap: 1.5rem; }
+
+    .scrollable-content {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    }
+
+    .arch-item {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 4rem;
+    }
+
+    .arch-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .arch-item img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .arch-item h4 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+    .arch-item p { color: #e2e8f0; line-height: 1.6; }
+
+    /* =========================================
+    SECTION 5: BOTTOM CTA
+    ========================================= */
+    .docs-cta-section {
+    background-color: #5a7182; /* Slightly darker slate */
+    text-align: center;
+    padding: 8rem 2rem;
+    color: var(--white);
+    }
+
+    .docs-cta-section h2 { font-size: 3rem; font-weight: 800; line-height: 1.2; margin-bottom: 1.5rem; }
+    .docs-cta-section p { color: #e2e8f0; font-size: 1.125rem; margin-bottom: 2.5rem; }
+
+    .cta-actions { display: flex; justify-content: center; gap: 1rem; }
+
+    .btn-solid-dark {
+    background-color: #111827;
+    color: var(--white);
+    padding: 0.75rem 2rem;
+    border-radius: 24px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    }
+
+    /* Responsive constraints */
+    @media (max-width: 1024px) {
+    .split-grid, .sticky-layout, .tab-content-area { flex-direction: column; }
+    .sticky-sidebar { position: relative; top: 0; margin-bottom: 4rem; }
+    .tab-btn { padding: 1rem 0.5rem; font-size: 0.85rem; }
+    }
