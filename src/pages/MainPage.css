@@ -6,45 +6,41 @@
     }
 
     /* HERO: DARK / BLUE / WHITE LINEAR GRADIENT */
-    .hero-section {
-    background: linear-gradient(180deg, 
-        #1b1d2f 0%, 
-        var(--navy-primary) 40%, 
-        #324478 75%, 
-        var(--white) 100%
-    );
-    padding: 8rem 2rem 10rem 2rem;
+   /* Update your existing hero-section */
+.hero-section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding: 10rem 5rem; /* Adjust padding to match your desired height */
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    }
-
-    .hero-section h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin-bottom: 1.5rem;
     color: var(--white);
-    letter-spacing: -0.025em;
-    max-width: 800px;
-    line-height: 1.1;
     }
 
-    .hero-section p {
-    color: #d1d5db;
-    font-size: 1.25rem;
-    margin-bottom: 2.5rem;
-    max-width: 600px;
-    line-height: 1.6;
+    /* Add the dark overlay */
+    .hero-overlay-dark {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    background-color: rgba(13, 12, 11, 0.75); /* Matches the Cases page darkness */
+    z-index: 1;
     }
+
+    /* Ensure content sits above the overlay */
+    .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
 
     .primary-action {
     padding: 0.875rem 2rem;
     border: none;
     border-radius: 9999px;
-    background-color: var(--navy-primary);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--navy-primary);;
     font-weight: 600;
     font-size: 1rem;
     cursor: pointer;
@@ -54,7 +50,8 @@
 
     .primary-action:hover {
     transform: translateY(-2px);
-    background-color: #0a3d5e;
+    background-color: var(--blue-accent);
+    color: var(--white);
     }
 
     /* SECTION 2: WHITE BACKGROUND & DUAL-TONE CARDS */

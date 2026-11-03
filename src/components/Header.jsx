@@ -22,13 +22,9 @@ export default function Header() {
         <nav className="header-center">
             {/* I use 'end' on the Home link so it only highlights when exactly on '/' */}
             <NavLink to="/" className="nav-link" end>Home</NavLink>
-            <NavLink to="/docs" className="nav-link">Developer docs</NavLink>
-            <NavLink to="/api" className="nav-link">API specs</NavLink>
+            <NavLink to="/sandbox" className="nav-link">Dashboard</NavLink>
+            <NavLink to="/docs" className="nav-link">Developer docs & API</NavLink>
             <NavLink to="/cases" className="nav-link">Case studies</NavLink>
-            <div className="nav-dropdown">
-            <NavLink to="/tracking" className="nav-link">Asset tracking</NavLink>
-            <span className="dropdown-arrow">v</span>
-        </div>
         </nav>
             
         <div className="header-right">

@@ -10,10 +10,13 @@ export default function MainPage() {
     return (
         <main className="main-content">
         {/* 1. Hero banner */}
-        <section className="hero-section">
-            <h1>IoT, high-efficiency device management</h1>
-            <p>Handle high payloads and offline buffering without a massive engineering team. Deploy fast, and keep every node in view.</p>
-            <button className="primary-action">View Network Topology</button>
+        <section className="hero-section" style={{ backgroundImage: `url(${maintenanceIcon})` }}>
+            <div className="hero-overlay-dark"></div>
+            <div className="hero-content">
+                <h1>IoT, high-efficiency device management</h1>
+                <p>Handle high payloads and offline buffering without a massive engineering team. Deploy fast, and keep every node in view.</p>
+                <button className="primary-action">View Network Topology</button>
+            </div>
         </section>
 
         {/* 2. Built for Scale */}
