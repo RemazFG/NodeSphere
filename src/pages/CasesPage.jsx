@@ -3,9 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import './CasesPage.css';
 
 // Asset placeholders (ensure these are added to your src/assets folder)
-import casesHero from '../assets/IMG_0156_da7c63.jpeg'; 
-import blueprintImg from '../assets/IMG_0158_da7c63.jpeg'; 
-import networkMap from '../assets/IMG_0159_da7c63.jpeg'; 
+import CasesHero from '../assets/CasesHero.jpg'; 
+import caseStudy_1 from '../assets/caseStudy_1.png'; 
+import casesCTA from '../assets/casesCTA.jpg'; 
+// Social media icons
+import x from '../assets/footerIcons/x.png';
+import linkedin from '../assets/footerIcons/linkedin.png';
 
 export default function CasesPage() {
     const navigate = useNavigate();
@@ -14,7 +17,7 @@ export default function CasesPage() {
         <main className="cases-page-container">
         
         {/* SECTION 1: Hero (Server Rack) */}
-        <section className="cases-hero" style={{ backgroundImage: `url(${casesHero})` }}>
+        <section className="cases-hero" style={{ backgroundImage: `url(${CasesHero})` }}>
             <div className="hero-overlay-dark"></div>
             <div className="cases-hero-content">
             <span className="section-tag-light">Proof</span>
@@ -112,10 +115,10 @@ export default function CasesPage() {
                 <div className="sidebar-block">
                 <h4>Share</h4>
                 <div className="share-icons">
+                    {/* <img src={linkIcon} alt="Copy Link" className="icon" /> */}
                     <span className="icon">🔗</span>
-                    <span className="icon">in</span>
-                    <span className="icon">𝕏</span>
-                    <span className="icon">f</span>
+                    <img src={linkedin} alt="LinkedIn" className="icon" />
+                    <img src={x} alt="X" className="icon" />
                 </div>
                 </div>
             </aside>
@@ -127,7 +130,7 @@ export default function CasesPage() {
                 <p>Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis vel et quam imperdiet.</p>
                 
                 <figure className="article-image">
-                <img src={blueprintImg} alt="Technical blueprint schematic" />
+                <img src={caseStudy_1} alt="Technical blueprint schematic" />
                 <figcaption>Technical Data Center Floor Plan Schematic</figcaption>
                 </figure>
 
@@ -145,7 +148,7 @@ export default function CasesPage() {
         </section>
 
         {/* SECTION 5: Bottom CTA (Global Map) */}
-        <section className="cases-cta" style={{ backgroundImage: `url(${networkMap})` }}>
+        <section className="cases-cta" style={{ backgroundImage: `url(${casesCTA})` }}>
             <div className="hero-overlay-dark"></div>
             <div className="cta-content">
             <h2>Build a custom management<br/>system</h2>

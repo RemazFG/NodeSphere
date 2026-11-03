@@ -310,3 +310,23 @@
     .deep-dive-sidebar { position: relative; top: 0; }
     .cards-container { grid-template-columns: 1fr; }
 }
+
+.share-icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    }
+
+    .share-icons .icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    /* If your icons are black and need to be white to match the theme, uncomment the next line: */
+    /* filter: invert(1); */
+    }
+
+    .share-icons .icon:hover {
+    opacity: 1;
+}
