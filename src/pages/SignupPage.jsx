@@ -9,7 +9,7 @@ export default function SignupPage() {
         e.preventDefault(); // Prevents the default form reload
         // In a real app, you would validate and send data to your backend here.
         // For the demo, we instantly route them to their new dashboard.
-        navigate('/sandbox'); 
+        navigate('/app/overview'); 
     };
 
     return (

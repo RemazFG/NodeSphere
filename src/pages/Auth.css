@@ -76,7 +76,7 @@
     .auth-form-box {
     width: 100%;
     max-width: 440px;
-    background-color: #111827;
+    background-color: var(--navy-primary);
     padding: 3rem;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.08);

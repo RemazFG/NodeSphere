@@ -298,13 +298,17 @@
     .cta-actions { display: flex; justify-content: center; gap: 1rem; }
 
     .btn-solid-dark {
-    background-color: #111827;
+    background-color: var(--navy-primary);
     color: var(--white);
     padding: 0.75rem 2rem;
     border-radius: 24px;
     font-weight: 600;
     border: none;
     cursor: pointer;
+    }
+
+    .btn-solid-dark:hover { 
+        background-color: var(--bg-dark); 
     }
 
     /* Responsive constraints */

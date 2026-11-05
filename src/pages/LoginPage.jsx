@@ -8,7 +8,7 @@ export default function LoginPage() {
     const handleLogin = (e) => {
         e.preventDefault();
         // Simulate successful authentication
-        navigate('/sandbox');
+        navigate('/app/overview');
     };
 
     return (
