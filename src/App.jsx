@@ -9,20 +9,18 @@ import CasesPage from './pages/CasesPage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 
-// Import the new App Layout and Overview Dashboard
 import AppLayout from './components/AppLayout';
 import OverviewDashboard from './pages/OverviewDashboard';
+import PlaceholderPage from './pages/PlaceholderPage'; 
 
 import './index.css';
 
 export default function App() {
   const location = useLocation();
-  // Check if the current URL starts with "/app"
   const isAppRoute = location.pathname.startsWith('/app');
 
   return (
     <div className="app-container">
-      {/* Hide marketing header if in the app */}
       {!isAppRoute && <Header />}
       
       <Routes>
@@ -35,14 +33,17 @@ export default function App() {
         <Route path="/signup" element={<SignupPage />} />
         
         {/* Authenticated App Routes */}
-        <Route path="/app/overview" element={
-          <AppLayout>
-            <OverviewDashboard />
-          </AppLayout>
-        } />
+        <Route path="/app/overview" element={<AppLayout><OverviewDashboard /></AppLayout>} />
+        
+        {/* 2. Add the missing routes using the Placeholder */}
+        <Route path="/app/devices" element={<AppLayout><PlaceholderPage title="Devices Management" /></AppLayout>} />
+        <Route path="/app/analytics" element={<AppLayout><PlaceholderPage title="Analytics & Reports" /></AppLayout>} />
+        <Route path="/app/automation" element={<AppLayout><PlaceholderPage title="Automation Rules" /></AppLayout>} />
+        <Route path="/app/alerts" element={<AppLayout><PlaceholderPage title="System Alerts" /></AppLayout>} />
+        <Route path="/app/users" element={<AppLayout><PlaceholderPage title="User Access Control" /></AppLayout>} />
+        <Route path="/app/settings" element={<AppLayout><PlaceholderPage title="Platform Settings" /></AppLayout>} />
       </Routes>
 
-      {/* Hide marketing footer if in the app */}
       {!isAppRoute && <Footer />}
     </div>
   );
