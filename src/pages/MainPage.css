@@ -270,6 +270,15 @@
     cursor: pointer;
     }
 
+    .btn-text-next {
+    background: none;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--white);
+    cursor: pointer;
+    }
+
     .field-image-container {
     flex: 1.2;
     }

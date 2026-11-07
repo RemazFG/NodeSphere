@@ -49,7 +49,7 @@ export default function DocsPage() {
             <p>The sidebar gives you the full structure. Every spec, every schema, every database note is open and readable.</p>
             <div className="split-actions">
                 <button className="btn-outline-dark">Explore</button>
-                <button className="btn-text">View &gt;</button>
+                {/* <button className="btn-text">View &gt;</button> */}
             </div>
             </div>
             
@@ -123,7 +123,7 @@ export default function DocsPage() {
                 <p>A clean flowchart shows the path from device to database to dashboard. Every connection is stateless and built for scale.</p>
                 <div className="sticky-actions">
                 <button className="btn-outline-dark">Code</button>
-                <button className="btn-text">Next &gt;</button>
+                <button className="btn-text-next">Next &gt;</button>
                 </div>
             </div>
             

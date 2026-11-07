@@ -55,7 +55,7 @@ export default function MainPage() {
                         <span className="card-tag">Tracking</span>
                         <h3>Asset tracking that never loses the thread</h3>
                         <p>Live GPS nodes, color-coded maps, and a feed that shows movement as it happens.</p>
-                        <a href="#" className="view-link">View &gt;</a>
+                        {/* <a href="#" className="view-link">View &gt;</a> */}
                     </div>
 
                     {/* Column 2 (Staggered) */}
@@ -64,7 +64,7 @@ export default function MainPage() {
                         <span className="card-tag">Maintenance</span>
                         <h3>Predictive maintenance logging without the guesswork</h3>
                         <p>Sensor logs and alert thresholds that flag a failing pump before it quits.</p>
-                        <a href="#" className="view-link">View &gt;</a>
+                        {/* <a href="#" className="view-link">View &gt;</a> */}
                     </div>
 
                     {/* Column 3 (Staggered further) */}
@@ -73,7 +73,7 @@ export default function MainPage() {
                         <span className="card-tag">Security</span>
                         <h3>Secure device integrations from the first handshake</h3>
                         <p>JWT validation and stateless REST calls keep every connection clean and verified.</p>
-                        <a href="#" className="view-link">View &gt;</a>
+                        {/* <a href="#" className="view-link">View &gt;</a> */}
                     </div>
 
                 </div>
