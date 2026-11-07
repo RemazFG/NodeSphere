@@ -44,7 +44,7 @@
     .hero-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(13, 12, 11, 0.85); /* Dark overlay */
+    background-color: rgba(13, 12, 11, 0.497); /* Dark overlay */
     z-index: 1;
     }
 

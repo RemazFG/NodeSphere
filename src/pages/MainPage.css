@@ -1,170 +1,190 @@
-    /* =========================================
-    3. MAIN CONTENT (GRADIENT BANNER & SECTION 2)
+/* =========================================
+    SECTION 1: HERO
     ========================================= */
-    .main-content {
-    flex: 1;
-    }
-
-    /* HERO: DARK / BLUE / WHITE LINEAR GRADIENT */
-   /* Update your existing hero-section */
-.hero-section {
+    .main-hero {
     position: relative;
     background-size: cover;
     background-position: center;
-    padding: 10rem 5rem; /* Adjust padding to match your desired height */
-    text-align: center;
+    padding: 10rem 5rem 8rem 5rem; /* Adjusted for left alignment */
     color: var(--white);
+    display: flex;
+    align-items: center;
+    min-height: 85vh; 
     }
 
-    /* Add the dark overlay */
-    .hero-overlay-dark {
+    /* Gradient overlay so the text remains readable on the left */
+    .hero-overlay-gradient {
     position: absolute;
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    bottom: 0;
-    background-color: rgba(13, 12, 11, 0.75); /* Matches the Cases page darkness */
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to right, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.4) 50%, transparent 100%);
     z-index: 1;
     }
 
-    /* Ensure content sits above the overlay */
-    .hero-content {
+    .main-hero-content {
     position: relative;
     z-index: 2;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-    .primary-action {
-    padding: 0.875rem 2rem;
-    border: none;
-    border-radius: 9999px;
-    background-color: var(--white);
-    color: var(--navy-primary);;
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-    box-shadow: 0 4px 15px rgba(8, 48, 74, 0.4);
-    }
-
-    .primary-action:hover {
-    transform: translateY(-2px);
-    background-color: var(--blue-accent);
-    color: var(--white);
-    }
-
-    /* SECTION 2: WHITE BACKGROUND & DUAL-TONE CARDS */
-    .built-for-scale-section {
-    background-color: var(--white);
-    color: var(--text-dark);
-    padding: 6rem 5rem;
-    }
-
-    .section-header {
-    margin-bottom: 4rem;
     max-width: 600px;
+    text-align: left;
     }
 
-    .section-tag {
-    color: var(--navy-primary);
-    font-size: 0.875rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    display: block;
-    margin-bottom: 0.75rem;
-    }
-
-    .section-header h2 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin: 0 0 1rem 0;
-    color: #111827;
-    letter-spacing: -0.025em;
-    }
-
-    .section-header p {
-    color: #4b5563;
-    font-size: 1.125rem;
-    margin: 0;
-    line-height: 1.6;
-    }
-
-    /* Feature Cards Grid */
-    .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-    }
-
-    .feature-card {
-    background-color: #fcfcfc;
-    padding: 2.5rem;
-    border-radius: 16px;
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    /* Dual-Tone Blue & Navy Border Effect */
-    .feature-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 16px;
-    padding: 2px; /* Border weight */
-    background: linear-gradient(135deg, var(--blue-accent) 0%, var(--navy-primary) 100%);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
-    }
-
-    .feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(17, 49, 71, 0.63);
-    }
-
-    .card-icon {
-    width: 48px;
-    height: 48px;
+    .main-hero-content h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 1.15;
     margin-bottom: 1.5rem;
     }
 
-    .feature-card h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin: 0 0 0.75rem 0;
-    color: var(--navy-primary);
+    .main-hero-content p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #e2e8f0;
+    margin-bottom: 2.5rem;
+    max-width: 500px;
     }
 
-    .feature-card p {
-    color: #4b5563;
-    font-size: 0.95rem;
+    .hero-button-group {
+    display: flex;
+    gap: 1rem;
+    }
+
+    .btn-outline-expert {
+    background-color: rgba(30, 41, 59, 0.8);
+    color: var(--white);
+    border: 1px solid #475569;
+    padding: 0.75rem 2rem;
+    border-radius: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    }
+
+    .btn-outline-expert:hover {
+    background-color: rgba(51, 65, 85, 0.9);
+    border-color: #64748b;
+    }
+
+    /* =========================================
+    SECTION 2: BUILT FOR SCALE
+    ========================================= */
+    .scale-section {
+    background-color: #5b6b80; /* Slate blue background */
+    padding: 6rem 5rem 8rem 5rem;
+    color: var(--white);
+    }
+
+    .scale-header {
+    margin-bottom: 4rem;
+    }
+
+    .scale-tag {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    }
+
+    .scale-header h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    margin: 0 0 1rem 0;
+    }
+
+    .scale-header p {
+    font-size: 1.125rem;
+    margin: 0;
+    color: #e2e8f0;
+    }
+
+    .scale-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    }
+
+    .scale-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    }
+
+    /* Staggering the columns */
+    .scale-card.stagger-1 { margin-top: 4rem; }
+    .scale-card.stagger-2 { margin-top: 8rem; }
+
+    .scale-card img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    }
+
+    /* Temporary style for image placeholders */
+    .mock-img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background-color: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    color: #cbd5e1;
+    }
+
+    .card-tag {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    }
+
+    .scale-card h3 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 0 0 1rem 0;
+    }
+
+    .scale-card p {
+    font-size: 1rem;
     line-height: 1.6;
+    color: #e2e8f0;
     margin: 0 0 1.5rem 0;
     }
 
-    .learn-more-btn {
-    background: none;
-    border: none;
-    color: var(--navy-primary);
+    .view-link {
+    color: var(--white);
+    text-decoration: none;
     font-weight: 600;
-    font-size: 0.875rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0;
-    transition: color 0.2s ease;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
     }
 
-    .learn-more-btn:hover {
-    color: var(--blue-accent);
+    .view-link:hover {
+    opacity: 0.8;
     }
+
+    /* Mobile Responsive */
+    @media (max-width: 900px) {
+    .main-hero {
+        padding: 8rem 2rem 6rem 2rem;
+    }
+    .main-hero-content h1 {
+        font-size: 3rem;
+    }
+    .scale-section {
+        padding: 4rem 2rem;
+    }
+    .scale-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    /* Remove the staggered margins on mobile screens so they stack neatly */
+    .scale-card.stagger-1, 
+    .scale-card.stagger-2 {
+        margin-top: 0;
+    }
+}
 
     /* =========================================
     5. FIELD DASHBOARD (SECTION 3)
